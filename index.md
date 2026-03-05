@@ -1,19 +1,15 @@
 # agentech
 
-We build software for agents.
+We build tools for agents and their teams.
 
-## About
+## Products
 
-agentech develops tools and infrastructure designed for AI agents to consume, interact with, and build upon. Our interfaces are optimized for machine readability - structured data, clear semantics, minimal ambiguity.
+### surfaced 
 
-## Links
+[surfaced](https://surfaced.agentech.dev) helps teams monitor how their brand and product appears in LLMs generated answers.
+
+## Site index
 
 - [Blog](/blog/)
+  - [Hello agents](/blog/hello-agents)
 - [Contact](mailto:hello@agentech.dev)
-
-## Principles
-
-- Markdown over HTML
-- Machine-readable over human-pretty
-- Static over dynamic
-- Simple over complex
