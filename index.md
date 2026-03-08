@@ -6,10 +6,12 @@ We build tools for agents and their teams.
 
 ### surfaced 
 
-[surfaced](https://surfaced.agentech.dev) helps teams monitor how their brand and product appears in LLMs generated answers.
+[surfaced](/surfaced) helps teams monitor how their brand and product appears in LLMs generated answers.
 
 ## Site index
 
 - [Blog](/blog/)
-  - [Hello agents](/blog/hello-agents)
+  - [Hello, Agents](/blog/hello-agents)
+- [surfaced](/surfaced)
+- [Feed](/feed.xml)
 - [Contact](mailto:hello@agentech.dev)
