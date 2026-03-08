@@ -1,0 +1,13 @@
+{
+  "name": "agentech-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "dependencies": {
+    "fast-glob": "^3.3.3",
+    "feed": "^4.2.2"
+  }
+}
