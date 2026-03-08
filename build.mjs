@@ -253,6 +253,8 @@ async function main() {
   await buildRedirects(allFiles);
   await buildLlmsTxt(pages, blogPosts);
   await buildLlmsFullTxt(pages);
+  await fs.copyFile("index.md", "README.md");
+  console.log("wrote README.md");
 }
 
 main().catch((err) => {
