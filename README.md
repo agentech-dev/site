@@ -2,7 +2,7 @@
 
 We build tools for agents and their teams.
 
-## Products
+## Tools
 
 ### surfaced 
 
