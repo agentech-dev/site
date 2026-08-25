@@ -1,0 +1,54 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  pathname: string;
+  mdPath?: string;
+}
+
+const { title, description, pathname, mdPath } = Astro.props;
+const site = Astro.site?.toString().replace(/\/$/, '') ?? '';
+const canonical = `${site}${pathname}`;
+const mdHref = mdPath ?? (pathname === '/' ? '/index.md' : `${pathname}.md`);
+const fullTitle = title === 'agentech' ? 'agentech' : `${title} — agentech`;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" type="text/markdown" href={mdHref} />
+    <link rel="alternate" type="application/atom+xml" title="agentech feed" href="/feed.xml" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <header>
+      <p><strong><a href="/" rel="home">agentech</a></strong></p>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/surfaced">surfaced</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main">
+      <slot />
+    </main>
+    <footer>
+      <p>
+        <a href={mdHref}>View as markdown</a> &middot;
+        <a href="/llms.txt">llms.txt</a> &middot;
+        <a href="/feed.xml">Feed</a> &middot;
+        <a href="mailto:hello@agentech.dev">Contact</a>
+      </p>
+      <p><small>&copy; agentech</small></p>
+    </footer>
+  </body>
+</html>

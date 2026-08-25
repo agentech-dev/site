@@ -1,4 +1,7 @@
-# surfaced
+---
+title: surfaced
+description: surfaced helps teams monitor how their brand and product appears in LLM-generated answers.
+---
 
 surfaced helps teams monitor how their brand and product appears in LLM-generated answers.
 
@@ -16,8 +19,3 @@ LLMs are increasingly how people discover and evaluate products. surfaced tracks
 ## Getting started
 
 surfaced is operated via its CLI. See the [documentation](/surfaced/docs) for setup and usage.
-
-## Links
-
-- [Documentation](/surfaced/docs)
-- [Back to agentech home](/)

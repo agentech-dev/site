@@ -4,10 +4,19 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node build.mjs"
+    "dev": "astro dev",
+    "build": "astro build && cp dist/index.md README.md",
+    "preview": "wrangler dev",
+    "deploy": "npm run build && wrangler deploy",
+    "check": "astro check"
   },
   "dependencies": {
-    "fast-glob": "^3.3.3",
-    "feed": "^4.2.2"
+    "astro": "^7.2.6",
+    "feed": "^5.2.1"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.9",
+    "typescript": "^6.0.3",
+    "wrangler": "^4.125.0"
   }
 }

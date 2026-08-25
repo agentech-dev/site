@@ -1,4 +1,7 @@
-# agentech
+---
+title: agentech
+description: We build tools for agents and their teams.
+---
 
 We build tools for agents and their teams.
 

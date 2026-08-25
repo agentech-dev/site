@@ -1,0 +1,33 @@
+---
+import { getEntry, render, getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+
+const entry = await getEntry('pages', 'index');
+if (!entry) throw new Error('Missing src/content/pages/index.md');
+const { Content } = await render(entry);
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+---
+<Base title={entry.data.title} description={entry.data.description} pathname="/">
+  <article>
+    <h1>{entry.data.title}</h1>
+    <Content />
+
+    <h2>Site index</h2>
+    <ul>
+      <li>
+        <a href="/blog">Blog</a>
+        <ul>
+          {posts.map((p) => (
+            <li><a href={`/blog/${p.id}`}>{p.data.title}</a></li>
+          ))}
+        </ul>
+      </li>
+      <li><a href="/surfaced">surfaced</a></li>
+      <li><a href="/feed.xml">Feed</a></li>
+      <li><a href="mailto:hello@agentech.dev">Contact</a></li>
+    </ul>
+  </article>
+</Base>
